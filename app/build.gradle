@@ -5,6 +5,7 @@ plugins {
     id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs.kotlin'
 }
+apply from: 'obfuscationUtils.gradle'
 
 android {
     compileSdk 31
@@ -15,6 +16,8 @@ android {
         targetSdk 31
         versionCode 1
         versionName "1.0"
+
+        buildConfigField 'String', 'SERVICE_BASE_URL', obfuscateJavaToByteString("https://private-214e3e-gittigidiyormock.apiary-mock.com/")
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

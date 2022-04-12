@@ -1,7 +1,7 @@
 package com.onurbarman.gittigidiyorcase.di
 
+import com.onurbarman.gittigidiyorcase.BuildConfig
 import com.onurbarman.gittigidiyorcase.data.ApiMainHeadersProvider
-import com.onurbarman.gittigidiyorcase.data.Config
 import com.onurbarman.gittigidiyorcase.data.services.ApiService
 import dagger.Module
 import dagger.Provides
@@ -40,7 +40,7 @@ object NetworkModule {
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(Config.BASE_URL)
+            .baseUrl(BuildConfig.SERVICE_BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient)
             .build()
