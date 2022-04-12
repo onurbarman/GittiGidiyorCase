@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GittiGidiyorCase</string>
+    <string name="try_again">Tekrar Dene</string>
+    <string name="error_title">Bir Hata Oluştu</string>
+
+    <string name="price_text">%1$s TL</string>
+    <string name="discount_text">%1$s indirim</string>
+    <string name="remaining_count_text">Son %1$s adet kaldı</string>
+    <string name="product_active">Ürün Satışta</string>
+    <string name="product_passive">Ürün tükendi</string>
+</resources>
